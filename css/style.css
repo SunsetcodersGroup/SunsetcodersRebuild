@@ -1,0 +1,18 @@
+body {
+    font-size: 14px;
+	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    margin: 0;
+    padding: 0;
+}
+
+.body-content
+{
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.lineOut
+{
+	padding-top: 80px;
+	clear: both;
+}
