@@ -1,65 +1,50 @@
 <?php
 
-$dbConnection = databaseConnection();
+$dbConnection = databaseConnection ();
 
+/*
+ * Make sure header.php exists
+ * if so use it as a header in the website
+ */
 function get_head() {
-    $filename = 'header.php';
-
-    if (file_exists($filename)) {
-        include_once (dirname(__FILE__) . '/' . $filename);
-    }
+	$filename = 'header.php';
+	
+	if (file_exists ( $filename )) {
+		include_once (dirname ( __FILE__ ) . '/' . $filename);
+	} 
 }
 
 function call_page() {
-
-    global $dbConnection;
-    unset($getPageName);
-	$moduleArray = array();
 	
-    $page = $_SERVER['REQUEST_URI'];
-    $halfValue = explode('.php/', $page);
-
-    if (!empty($halfValue[1])) {
-        $getPageName = $halfValue[1];
-    }
-
-    $pageName = (empty($getPageName)) ? "Home" : $getPageName;
-
-    if(mysqli_query($dbConnection,"DESCRIBE  pages ")){
-    
-     	$pageRef = $dbConnection->prepare("SELECT pages.pageID, moduleCode FROM pages INNER JOIN page_content ON pages.pageID=page_content.pageID && pageName='$pageName' ORDER BY rowID ");
-    	$pageRef->execute();
-    	$pageRef->bind_result($pageID, $moduleCode);
-    	
-    	while ($checkRow = $pageRef->fetch()) {
-
-    		$moduleArray[] = $moduleCode;
-    	}	
-    } 
-    
-    foreach ($moduleArray as &$value) {
-    	call_to_module($value);
-    }
+	global $dbConnection;
+	
+	$getPageID= $_SERVER['QUERY_STRING'];
+	$getPageID= ($getPageID=="") ? 'Home' : $getPageID;
+		
+	foreach (glob("prometheus/prom_modules/*.php") as $filename) {
+		require_once $filename;
+	}
+	
+	$pageRef = $dbConnection->prepare ( "SELECT pageName, rowID, moduleCode FROM page_content WHERE pageName='$getPageID' ORDER BY rowID"  );
+	if (! $pageRef->execute ()) {
+		echo "Execute failed: (" . $pageRef->errno . ") " . $pageRef->error;
+	  } 
+	$pageRef->bind_result ( $pageID, $rowID, $moduleCode);
+	
+	while ( $checkRow = $pageRef->fetch () ) {
+		
+		if ($getPageID!='Home')
+		$moduleCode::callToPage();
+		else
+		$moduleCode::callToFunction ();
+		
+	} 
 }
 
-function call_to_module($moduleName) {
-
-    global $dbConnection;
-
-    	if ($baseCode = $dbConnection->prepare("SELECT settingsFilename FROM settings WHERE settingsName=?")) {
-
-            $baseCode->bind_param('s', $moduleName);
-            $baseCode->execute();
-            $baseCode->bind_result($settingsFilename);
-            $baseCode->fetch();
-
-            $filepath = 'Prometheus/prom_modules/' . $settingsFilename;
-
-        }
-        
-        include_once ($filepath);
-        
-        $moduleClass = new $moduleName($dbConnection);
-        $moduleClass->callToFunction();
-    
+function get_foot() {
+	$filename = 'footer.php';
+	
+	if (file_exists ( $filename )) {
+		include_once (dirname ( __FILE__ ) . '/' . $filename);
+	} 
 }

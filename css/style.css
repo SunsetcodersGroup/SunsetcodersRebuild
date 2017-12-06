@@ -1,14 +1,17 @@
 body {
-    font-size: 14px;
-	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
-    margin: 0;
-    padding: 0;
+        font-size: 14px;
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: #333333;
 }
 
 .body-content
 {
-	max-width: 900px;
 	margin: 0 auto;
+	max-width: 1000px;
+	padding: 0px 10px;
 }
 
 .lineOut
