@@ -1,3 +1,12 @@
+<?php
+/**
+ * What we do script - rendering the "what we do" portion of the page.
+ *
+ * @author Andrew Jeffries
+ *
+ * @version     1.0.0       Prototype including changes as per Pencil Melody.
+ */
+?>
 <style>
     #whatwedo-background { width: 100%; text-align: center; clear: both; height: 700px; }
     .whatwedo-screen { background-color: #fff; border: 1px solid #fff;  height: 600px;  }
@@ -48,33 +57,33 @@ class whatwedo {
                     <div class="whatwedo-header"><h1>Our Website Development Process</h1></div>
                     <div class="whatwedo-subtitle">We take care of our clients from start to finish and beyond.</div>
                     <div class="whatwedo-row">
-                        <div class="whatwedo-title-window"><h2>Client Meeting</h2></div>
+                        <div class="whatwedo-title-window"><h2>Introductory Meetings</h2></div>
                         <div class="whatwedo-image-window"><img src="Images/client-meeting.jpg" width="155"></div>
-                        <div class="whatwedo-content-window">Meetings with the client to discuss your dream website. Information Gathering </div>
+                        <div class="whatwedo-content-window">We meet with you to discuss your dream website and gather information to begin the process.</div>
                     </div>
 
                     <div class="whatwedo-row">
                         <div class="whatwedo-title-window"><h2>Planning</h2></div>
                         <div class="whatwedo-image-window"><img src="Images/planning.jpg" width="155"></div>
-                        <div class="whatwedo-content-window">Our Design team puts together an designs your dream website. </div>
+                        <div class="whatwedo-content-window">Our design team puts together the information given to create a design for the website.</div>
                     </div>
 
                     <div class="whatwedo-row">
                         <div class="whatwedo-title-window"><h2>Client feedback.</h2></div>
                         <div class="whatwedo-image-window"><img src="Images/client-meeting.jpg" width="155"></div>
-                        <div class="whatwedo-content-window">Once the client is satisfied with the design and layout of the website production begins.  </div>
+                        <div class="whatwedo-content-window">We respond to your feedback on design and layout of the website and once your are satisfied, production begins.</div>
                     </div>
 
                     <div class="whatwedo-row">
                         <div class="whatwedo-title-window"><h2>Development</h2></div>
                         <div class="whatwedo-image-window"><img src="Images/software-development.jpg" width="155"></div>
-                        <div class="whatwedo-content-window">Our Seasoned Developers make your dream website. </div>
+                        <div class="whatwedo-content-window">Our seasoned developers do the behind-the-scenes work to ensure your dream website functions as planned.</div>
                     </div>
 
                     <div class="whatwedo-row">
                         <div class="whatwedo-title-window"><h2>Implementation.</h2></div>
                         <div class="whatwedo-image-window"><img src="Images/upload.png" width="155"></div>
-                        <div class="whatwedo-content-window">Upload and testing. </div>
+                        <div class="whatwedo-content-window">We upload the site and test it, perfecting it with your feedback.</div>
                     </div>
 
                 </div>
