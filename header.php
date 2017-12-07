@@ -11,7 +11,7 @@
         background: url('Images/header2.png');
         background-size: cover;
         height: 200px;
-        border: 1px solid blue;
+        
     }
 
     .header-left, .header-center, .header-right {
