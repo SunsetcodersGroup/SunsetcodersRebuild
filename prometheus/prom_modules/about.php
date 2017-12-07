@@ -132,14 +132,15 @@ class about extends database
                 <div id="about-triwindow">
                     <div class="about-window1">
                         <div class="about-number-title"><img src="Images/1.jpg"> Short History</div>
+                          There is no short history with Sunsetcoders. Most of our developers have been within the IT industry's for many years.
                     </div>
                     <div class="about-window2">
                         <div class="about-number-title"><img src="Images/2.jpg"> Our Main Goal</div>
-
+                        To Assist companys with there dream website, apps or Logo to come to reality.
                     </div>
                     <div class="about-window3">
                         <div class="about-number-title"><img src="Images/3.jpg"> What Defines us ?</div>
-
+                            No Idea lol
                     </div>
                 </div>
                 <div class="about-baseplate"></div>
