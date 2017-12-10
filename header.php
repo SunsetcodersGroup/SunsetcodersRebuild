@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Header script
  */
@@ -8,10 +9,9 @@
         width: 100%;
         clear: both;
         overflow: hidden;
-        background: url('Images/header2.png');
         background-size: cover;
         height: 200px;
-        
+
     }
 
     .header-left, .header-center, .header-right {
@@ -53,6 +53,24 @@
     .header-hyperlinks a:hover, .header-top-line a:hover {
         color: #fe750b;
     }
+
+    /* Desktop Screen */
+    
+@media only screen and (min-width : 1025px) {
+    .mobile-screen { display: none; }
+    .header-link { display: inline-block; width: 50%; }
+    
+}
+
+    /* Mobile Screen */
+    
+@media only screen and (max-width : 1024px) {
+    #mobile-logo { display: hidden; }
+    #header-background { height: 400px; }
+    .header-center { display: none; }
+    .header-link { width: 100%; height: 30px; }
+}
+
 </style>
 
 <div id="header-background">
@@ -60,15 +78,19 @@
     <div class="body-content">
         <div class="header-top-line"><a href="?staff">Meet the Team</a></div>
         <div class="header-hyperlinks">
+            <div class="mobile-screen"><a href="http://www.sunsetcoders.com.au/index1.php"><img src="Images/logo.png" height=80></a></div>
+
             <div class="header-left">
-                <a href="http://www.sunsetcoders.com.au/index1.php">Home</a>
-                <a href="?About">About</a>
+                <div class="header-link"> <a href="http://www.sunsetcoders.com.au/index1.php">Home</a> </div>
+                <div class="header-link"><a href="?About">About</a></div>
             </div>
-            <div class="header-center"><a href="http://www.sunsetcoders.com.au/index1.php"><img src="Images/logo.png"
-                                                                                                height=80></a></div>
+            <div class="header-center">
+                <a href="http://www.sunsetcoders.com.au/index1.php"><img id="desktop-logo" src="Images/logo.png" height=80></a>
+            </div>
             <div class="header-right">
-                <a href="?Services">Services</a>
-                <a href="?Contact">Contact</a></div>
+                <div class="header-link"> <a href="?Services">Services</a></div>
+                <div class="header-link"> <a href="?Contact">Contact</a></div>
+            </div>
         </div>
 
     </div>

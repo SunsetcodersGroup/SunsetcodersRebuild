@@ -13,6 +13,14 @@
     .myservices-window { width: 290px; display: inline-block; height: 200px;   margin: 15px; text-align: left; color: #dadada;  }
     .myservices-content img { float: left; margin: 5px; }
 
+        #services-frontpage { clear: both; width: 100%; height: 600px;  }
+    .service-frontpage { clear: both; background: url('Images/front.jpg'); background-color: #161616; background-repeat: no-repeat; text-align: center; height: 400px; }
+    
+            @media only screen and (max-width: 1000px) {
+  #services-frontpage {
+        height: 700px;;
+    }
+     .service-frontpage { clear: both; background: url('Images/front.jpg'); background-color: #161616; background-repeat: no-repeat; text-align: center; height: 800px; }
 </style>
 <?php
 
@@ -71,10 +79,6 @@ class myservices extends database {
         $myservicesImage = $myservicesTitle = $myservicesDescription = NULL;
         ?>
 
-<style>
-    #services-frontpage { clear: both; width: 100%; height: 600px;  }
-    .service-frontpage { clear: both; background: url('Images/front.jpg'); background-color: #161616; background-repeat: no-repeat; text-align: center; height: 400px; }
-</style>
         <div id="services-frontpage">
             <div class="body-content">
                 <div class="service-frontpage">
