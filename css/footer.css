@@ -1,0 +1,23 @@
+#footer-background { clear: both; height: 460px; width: 100%; color: #fff;  background: url("Images/footertop.jpg"); background-repeat: no-repeat; background-color: #161616; background-size: 100%; font-size: 10pt; }
+
+.footer-triwindow { clear: both; width: 1000px; text-align: center; height: 300px; padding-top: 100px; border-bottom: 1px solid #2f2f2f; }
+.footer-services { display: inline-block; width: 300px; height: 300px; vertical-align: top; text-align: left; color: #fe750b; }
+.footer-about { display: inline-block; width: 320px;  height: 300px; vertical-align: top; color: #898989; text-align: left; margin-left: 20px; margin-right: 20px; }
+.footer-about a { color: #fe750b; text-decoration: none; }
+
+.footer-newsletter { display: inline-block; width: 300px; height: 300px; vertical-align: top; text-align: left; }
+.footer-newsletter input[type=submit] { height: 30px; background-color: #ff6634; color: #fff; border: 0; font-weight: bold; width: 30px; }
+.footer-newsletter input[type=text] { height: 30px; width: 245px; }
+
+#footer-newsletter-window {  height: 400px; width: 100%; background-color: #fff; border: 1px solid white; }
+#footer-socialmedia-window {  height: 200px; background-color: #272727; }
+#footer-copyright-window {  height: 50px; background-color: #fe750b; line-height: 50px; text-align: center; text-transform: uppercase; color: #fff; }
+
+#footer-services-title { color: #fff; font-size: 12pt; }
+.footer-news { background-color: #2d2d2d; float: left; margin-left: 5px; color: #d0d0d0; padding: 3px; }
+
+
+.footer-hyperlinks-line { color: #656565; }
+.footer-hyperlinks-line a { text-align: left; text-decoration: none; color: #656565;  }
+
+p.footer-news { height: 20px; margin: 0 5px 5px 0; }

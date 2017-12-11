@@ -1,3 +1,4 @@
-/nbproject/private/
-.idea/workspace.xml
-.idea/workspace.xml
+nbproject/
+.idea/
+.settings/
+mcmmo/

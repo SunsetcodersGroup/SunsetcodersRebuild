@@ -36,8 +36,8 @@
     </head>
     <body>
         <?php
-        include_once(dirname(__FILE__) . '/auth.php');
-        include_once(dirname(__FILE__) . '/function_class.php');
+        include_once(dirname(__FILE__) . 'php/auth.php');
+        include_once(dirname(__FILE__) . 'php/function_class.php');
         get_head();
         call_page();
         get_foot();
